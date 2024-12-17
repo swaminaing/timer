@@ -1,6 +1,8 @@
+import { Component } from "react";
 import "./App.css";
 import Button from "./components/Button";
 import Input from "./components/Input";
+import Container from "./components/Container";
 
 function App() {
   return (
@@ -16,6 +18,10 @@ function App() {
         <Button href="https://google.com">
           A Link
         </Button>
+      </p>
+
+      <p>
+        <Container as={Button}>Click</Container>
       </p>
     </main>
   );
