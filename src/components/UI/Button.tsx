@@ -19,7 +19,7 @@ const Button = (props: ButtonProps | AnchorProps) => {
         )
     }
   return (
-    <button {...props}></button>
+    <button className="button" {...props}></button>
   )
 }
 
