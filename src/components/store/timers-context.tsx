@@ -1,4 +1,4 @@
-import React, { createContext, ReactNode, useContext, useReducer } from "react";
+import { createContext, ReactNode, useContext, useReducer } from "react";
 
 export type Timer = {
   name: string;
@@ -15,12 +15,6 @@ const initialState: TimerState = {
   timers: [],
 };
 
-type TimerContextValue = TimerState & {
-  addTimer: (timerData: Timer) => void;
-  startTimer: () => void;
-  stopTimer: () => void;
-};
-
 type AddTimerAction = {
     type: "ADD_TIMER";
     payload: Timer;
@@ -33,6 +27,12 @@ type StopTimerAction = {
 type StartTimerAction = {
     type: "START_TIMERS"
 }
+
+type TimerContextValue = TimerState & {
+  addTimer: (timerData: Timer) => void;
+  startTimer: () => void;
+  stopTimer: () => void;
+};
 
 type Action = AddTimerAction | StartTimerAction | StopTimerAction;
 
